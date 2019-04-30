@@ -1,0 +1,20 @@
+﻿官方部署说明
+https://docs.docker.com/install/linux/docker-ce
+只要完全按着说明部署就可以完成
+
+docker国际镜像	https://hub.docker.com/search?&q= 从中有大量常用镜像
+
+更新Docker使用国内的的镜像仓库
+/etc/docker/daemon.json
+{
+"registry-mirrors":["https://registry.docker-cn.com"]
+}
+
+docker images	查看本地安装的docker镜像
+
+docker pull nginx	拉取nginx
+docker pull nginx:1.12	特定版本
+
+容器就是在镜像上铺的一层读写层
+
+容器性能的好坏取决于存储驱动	Ubuntu-aufs	CentOS-devicemaapper
