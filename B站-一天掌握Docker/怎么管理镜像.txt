@@ -1,0 +1,16 @@
+docker image +
+
+ls	列出镜像
+history	查看ngiux镜像的分层
+inspect	查看详情
+pull	拉
+push	推
+rm	删
+tag	打标记
+save	存	save ngiux>nginx.tar	保存成一个.tar文件
+import	导入	
+export	导出	export DockerID > docker.tar	导出为一个.tar文件
+
+
+docker ps 查看正在运行的容器
+docker run -itd busybox	运行busybox容器
