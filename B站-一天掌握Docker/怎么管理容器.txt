@@ -1,7 +1,12 @@
 Docker container+
 
 run 创建
--itd    交互式+伪终端+后台运行 | docker container run -itd --name ng nginx
+    -itd    交互式+伪终端+后台运行 | docker container run -itd --name ng nginx
+    -e [参数] 传入参数
+    -p [端口] 设定发布端口
+        -p不要设定在最后面 docker container run -itd -p 8080:80 --name ng nginx
+        如果启动失败提示网卡问题可以重启docker服务
+    --restart=always 容器挂了会自动重启
 
 exec 进入ng容器中
 docker exec -it [容器ID] /bin/bash
