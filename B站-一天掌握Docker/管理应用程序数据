@@ -1,2 +1,0 @@
-将 docker 主机数据挂载到容器
-volumems/bind mounts/tmpfs
