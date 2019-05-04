@@ -1,5 +1,5 @@
 ﻿官方部署说明
-https://docs.docker.com/install/linux/docker-ce
+https://docs.docker.com/install/linux/docker-ce/centos/
 只要完全按着说明部署就可以完成
 
 docker国际镜像	https://hub.docker.com/search?&q= 从中有大量常用镜像

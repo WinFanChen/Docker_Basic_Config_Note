@@ -1,0 +1,8 @@
+Docker container+
+
+run 创建
+-itd    交互式+伪终端+后台运行 | docker container run -itd --name ng nginx
+
+exec 进入ng容器中
+docker exec -it [容器ID] /bin/bash
+
