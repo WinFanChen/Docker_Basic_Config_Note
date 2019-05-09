@@ -8,4 +8,4 @@
 + [管理镜像](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/怎么管理镜像.md)<br>
 + [管理容器](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/怎么管理容器.md)<br>
 + [管理应用程序数据](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/管理应用程序数据.md)<br>
-+ [搭建一个LNMP的项目——WordPress](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/搭建一个LNMP的项目.md)<br>
++ [搭建一个LNMP的项目——WordPress](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/用LNMP平台搭建WordPress.md)<br>
