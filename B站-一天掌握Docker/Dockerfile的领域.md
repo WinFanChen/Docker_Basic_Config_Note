@@ -38,7 +38,7 @@ copy nginx.conf /usr/lcoal/nginx/conf   //将配置文件
 
 workdir /usr/local/nginx    //指定工作目录
 expose 80
-cmd ["./sbin/nginx", "-g", "daemon off;"]
+cmd ["./sbin/nginx","-g","daemon off;"]
 
 开始构建了：build命令选项
 docker image build -t [docker镜像仓库名和版本号] \
@@ -92,3 +92,30 @@ nginx:v1
 启动mysql容器
 如果之前有部署mysql可能需要删除docker卷 docker volume rm mysql-vol  //删除容器卷
 接下来可以尝试重新部署WordPress
+
+__部署java__
+
+dockerfile:
+from centos:7
+maintainer www.aliangedu.com
+
+add jfk-8u45-linux-x64.tar.gz /usr/lcoal    //传入jdk
+env java_home /usr/lcal/jdk1.8.0_45 //设置java_home
+
+add apache-tomcat-8.0.46.tar.gz /usr/local  //
+copy server.xml /usr/lcoal/apache-tomcat-8.0.46/conf
+
+run rm -f /usr/local/*.tar.gz
+
+workdir /usr/lcoal/apache-tomcat-8.0.46
+expose 8080
+entryponit["./bin/catalina.sh","run"]
+
+apache默认路径：/app/webapps
+
+创建容器
+docker run -itd \
+--name=tomcat \
+-p 8080:8080 \
+--mount type=bind,src=/app/webapps/,dst=/usr/localappache-tomcat-8.0.46/webapps \
+tomcat:v1
