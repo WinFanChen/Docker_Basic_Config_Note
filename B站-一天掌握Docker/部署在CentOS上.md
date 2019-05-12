@@ -1,6 +1,8 @@
 ﻿## [官方部署说明](https://docs.docker.com/install/linux/docker-ce/centos/)
 只要完全按着说明部署就可以完成
 
+首先保证本地时间与docker服务器的时间保持一致！不然镜像都拉不下来
+
 [docker国际镜像](https://hub.docker.com/search?&q=)中有大量常用镜像
 
 更新Docker使用国内的的镜像仓库<br>
