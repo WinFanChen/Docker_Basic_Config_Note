@@ -1,4 +1,4 @@
-__官方有一个Registry的doker镜像可以让宿主机实现存储私有镜像__
+## 官方有一个Registry的doker镜像可以让宿主机实现存储私有镜像
 
 之前可以通过docker iamge save将镜像进行导出 我们玩个高级一点的
 

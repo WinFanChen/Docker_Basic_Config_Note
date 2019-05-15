@@ -1,4 +1,4 @@
-__Linux+MySQL+PHP+Nginx 配合WordPress 搭建博客__
+## Linux+MySQL+PHP+Nginx 配合WordPress 搭建博客
 
 数据库文件要挂载到本地
 PHP网页要挂载到一个目录

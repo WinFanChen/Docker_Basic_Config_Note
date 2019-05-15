@@ -1,4 +1,4 @@
-__Dockerfile指令__
+## Dockerfile指令
 docker image build 命令通过 dockerfile 文件来构建镜像
 
 * dockerfile文件示例
