@@ -1,17 +1,17 @@
 __Dockerfile指令__
-看样子是用来构建自己的镜像
+docker image build 命令通过 dockerfile 文件来构建镜像
 
 * dockerfile文件示例
 ```
 from centos:7
 maintainer www.aliangedu.com
-run yum install                         //构建镜像时运行shell命令
-cmd ["./sbin/php-ftp","-c","/usr/local/php/etc/php-ftp.conf] //运行镜像时运行shell命令 用数组实现 一般用来启脚本什么的
-expose                                  //声明端口
+run yum install...                      //构建镜像时运行shell命令
+cmd ["./sbin/php-ftp","-c",...]         //运行镜像时运行shell命令 用数组实现 一般用来启脚本什么的
+expose 80                               //声明端口
 env java_home /usr/lcoal/jdk1.8.0_45    //声明容器内环境变量java_home
 add php-5.6.31.tar.gz /tmp/             //拷贝文件/目录到镜像 不建议使用url 压缩包会自动解压
 copy                                    //无解压功能的add
-entrypoint 在使用docker run [options] image [command] 时接收command
+entrypoint                              //在使用docker run [options] image [command] 时接收command
 volume                                  //还记得在run时的挂载吗? 这个不常用
 user root                               //使用 root 用户权限执行run,cmd,entrypoint命令
 workdir /data                           //设定run,cmd,entrypoint,copy,add命令的工作目录 用exec进入的默认目录
@@ -34,11 +34,11 @@ healthcheck                             //健康检查
 
     run rm -rf /tmp/nginx-1.12.1* && yum clean all  //清理工作
 
-    copy nginx.conf /usr/lcoal/nginx/conf   //将配置文件
+    copy nginx.conf /usr/lcoal/nginx/conf   //将配置文件拷贝到此路径下
 
     workdir /usr/local/nginx    //指定工作目录
-    expose 80
-    cmd ["./sbin/nginx","-g","daemon off;"]
+    expose 80   //声明端口
+    cmd ["./sbin/nginx","-g","daemon off;"] //将容器放入后台操作
     ```
     * 开始构建：build命令选项<br>
     docker image build -t [docker镜像仓库名和版本号] \
