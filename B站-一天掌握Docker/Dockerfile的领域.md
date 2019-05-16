@@ -22,23 +22,38 @@ healthcheck                             //健康检查
     * dockerfile(构建镜像) | nginx-1.12.1.tar.gz(nginx的源码包) | nginx.conf(nginx的配置文件)
     * dockerfile文件内容：
     ```
-    form centos:7   //引用镜像
-    maintainer www.aliangedu.com    //说明信息
-    run yum install -y gcc gcc-c++ make openssl-devel pcre-devel    //安装依赖包
-    add nginx-1.12.1.tar.gz /tmp    //将nginx-1.12.1.tar.gz放入/tmp
+    #引用镜像
+    FROM centos:7
 
-    run cd /tmp/nginx-1.12.1 && \
-        ./configure --prefix=/usr/lcoal/nginx && \
+    #说明信息
+    MAINTAINER wfc.com
+
+    #安装依赖包
+    RUN yum install -y gcc gcc-c++ make openssl-devel pcre-devel
+    
+    #将nginx-1.12.1.tar.gz放入/tmp
+    ADD nginx-1.16.0.tar.gz /tmp
+
+    #进行编译安装操作
+    RUN cd /tmp/nginx-1.16.0 && \
+        ./configure --prefix=/usr/local/nginx && \
         make -j 2 && \
-        make install    //进行编译安装操作
+        make install
 
-    run rm -rf /tmp/nginx-1.12.1* && yum clean all  //清理工作
+    #清理工作
+    RUN rm -rf /tmp/nginx-1.16.0* && yum clean all
 
-    copy nginx.conf /usr/lcoal/nginx/conf   //将配置文件拷贝到此路径下
+    #将配置文件拷贝到此路径下
+    copy nginx.conf /usr/lcoal/nginx/conf
 
-    workdir /usr/local/nginx    //指定工作目录
-    expose 80   //声明端口
-    cmd ["./sbin/nginx","-g","daemon off;"] //将容器放入后台操作
+    #指定工作目录
+    workdir /usr/local/nginx
+
+    #声明端口
+    EXPOSE 80
+
+    #将容器放入后台操作
+    CMD ["./sbin/nginx","-g","daemon off;"]
     ```
     * 开始构建：build命令选项<br>
     docker image build -t [docker镜像仓库名和版本号] \
