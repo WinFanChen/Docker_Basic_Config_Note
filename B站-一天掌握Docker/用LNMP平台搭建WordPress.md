@@ -1,9 +1,11 @@
 ## Linux+MySQL+PHP+Nginx 配合WordPress 搭建博客
 
-数据库文件要挂载到本地
+数据库文件要挂载到本地<br>
 PHP网页要挂载到一个目录
 
 拉取mysql的镜像（默认8.0） docker pull mysql
+
+创建lnmp的网络：Docker network create lnmp
 
 创建启动容器
 ```
@@ -25,9 +27,9 @@ docker exec lnmp_mysql sh \
 -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD" -e"create database wp"' 
 ```
 
-yum install mysql //安装数据库客户端
-mysql -h[ip地址] -uroot -p //进入数据库
-mysql> show databases; //可以查看到数据库
+yum install mysql //安装数据库客户端<br>
+mysql -h[ip地址] -uroot -p //进入数据库<br>
+mysql> show databases; //可以查看到数据库<br>
 
 先获取PHP的镜像
 创建PHP环境容器
