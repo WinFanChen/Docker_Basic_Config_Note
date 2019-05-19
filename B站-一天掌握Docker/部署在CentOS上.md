@@ -1,5 +1,19 @@
 ﻿## [官方部署说明](https://docs.docker.com/install/linux/docker-ce/centos/)
+
 只要完全按着说明部署就可以完成
+```
+$ sudo yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
+
+$ sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+
+$ sudo yum install docker-ce docker-ce-cli containerd.io
+
+$ sudo systemctl start docker
+```
 
 首先保证本地时间与docker服务器的时间保持一致！不然镜像都拉不下来
 

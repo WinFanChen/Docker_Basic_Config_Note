@@ -20,10 +20,9 @@ healthcheck                             //健康检查
 
 __用build构建nginx镜像__
 * 所需文件：
-    * dockerfile(构建镜像)
-    * nginx-1.12.1.tar.gz(nginx的源码包)
+    * [dockerfile](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/Dockerfile)(构建镜像)
+    * [nginx-1.12.1.tar.gz](http://nginx.org/download/nginx-1.12.1.tar.gz)(nginx的源码包)
     * nginx.conf(nginx的配置文件)
-* [dockerfile文件内容](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/Dockerfile)
    
 * 开始构建：docker image build +<br>
     -t [docker镜像仓库名和版本号]<br>
