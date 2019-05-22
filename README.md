@@ -29,5 +29,5 @@ __2019/5/19   开始收集能利用Docker优化部署的工具__<br>
 
 ## 实例
 
-+ [WordPress](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/用LNMP平台搭建WordPress.md)
-+ [Prometheus](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/Docker+anything/Docker+Prometheus.md)
++ [搭建 WordPress 博客](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/用LNMP平台搭建WordPress.md)
++ [搭建 Prometheus 监控平台](https://github.com/lcePolarBear/Ops_Automation_Note/blob/master/Prometheus/安装和配置.md)
