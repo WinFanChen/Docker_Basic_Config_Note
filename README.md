@@ -11,11 +11,6 @@ __2019/4/30   Bilibili-[一天掌握Docker](https://www.bilibili.com/video/av497
     >敏捷和devops的关系：敏捷是开发的思路 devops是实现的方式<br>
     提升效能，市场变化来改进自身速度减小管理单元，减小工程之间的耦合
 
-#
-__2019/5/19   开始收集能利用Docker优化部署的工具__<br>
-* 部署普罗米修斯监控平台
-
-
 ## 用法
 
 + [部署](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/部署在CentOS上.md)
@@ -30,4 +25,3 @@ __2019/5/19   开始收集能利用Docker优化部署的工具__<br>
 ## 实例
 
 + [搭建 WordPress 博客](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/用LNMP平台搭建WordPress.md)
-+ [搭建 Prometheus 监控平台](https://github.com/lcePolarBear/Ops_Automation_Note/blob/master/Prometheus/安装和配置.md)
