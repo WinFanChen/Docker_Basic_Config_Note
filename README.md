@@ -13,12 +13,12 @@ __2019/4/30   Bilibili-[一天掌握Docker](https://www.bilibili.com/video/av497
 
 ## 用法
 
-+ [将 Docker 部署在 CentOS 上](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/部署在CentOS上.md)
-+ [管理镜像：ls pull ...](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/怎么管理镜像.md)
-+ [管理容器：run exec ...](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/怎么管理容器.md)
-+ [管理应用程序数据 挂载](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/管理应用程序数据.md)
-+ [Build + Dockerfile](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/Dockerfile的领域.md)
-+ [用 Registry 搭建私有仓库](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/用Registry来搭建自己的私有docker仓库.md)<br>
++ [部署在 CentOS](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/部署在CentOS上.md)
++ [管理镜像](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/怎么管理镜像.md)
++ [管理容器](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/怎么管理容器.md)
++ [管理应用程序数据](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/管理应用程序数据.md)
++ [Build+Dockerfile](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/Dockerfile的领域.md)
++ [Registry 搭建私有仓库](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/用Registry来搭建自己的私有docker仓库.md)<br>
 + [Docker Hub 公有仓库](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/Docker%20Hub.md)
 + [Harbor 企业级私有仓库](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/选修：Harbor企业级私有镜像搭建.md)
 
