@@ -5,7 +5,7 @@ PHP网页要挂载到一个目录
 
 拉取mysql的镜像（默认8.0） docker pull mysql
 
-注意：要先创建lnmp的网络 [详见Dockerfile内容](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/B站-一天掌握Docker/Dockerfile的领域.md)
+注意：要先创建lnmp的网络 [详见Dockerfile内容](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/Docker%20用法/Dockerfile的领域.md)
 ```
 docker network create lnmp 
 ```
