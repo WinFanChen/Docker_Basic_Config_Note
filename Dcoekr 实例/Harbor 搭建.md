@@ -14,7 +14,7 @@ __安装 Harbor__
 tar zxvf harbor-offline-installer-vx.x.0.tgz
 ```
 * 创建一个 cert 文件夹进行证书操作
-* 在 cert 下[生成服务器的 https 公钥私钥](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/Docker%20实例/使用openssl%20实现%20https%20证书.md)
+* 在 cert 下[生成服务器的 https 公钥私钥](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/Dcoekr%20实例/使用%20openssl%20实现%20https%20证书.md)
 
 __编辑配置文件 Harbor.yml__
 ```
