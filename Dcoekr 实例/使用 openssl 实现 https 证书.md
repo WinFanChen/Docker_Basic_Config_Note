@@ -36,6 +36,7 @@ subjectAltName = @alt_names
 
 [alt_names]
 DNS.1=chen.com
+DNS.1=hostname
 EOF
 ```
 * 创建服务器私钥

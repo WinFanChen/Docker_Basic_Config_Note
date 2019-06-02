@@ -18,14 +18,14 @@ tar zxvf harbor-offline-installer-vx.x.0.tgz
 
 __编辑配置文件 Harbor.yml__
 ```
-hostname: 172.28.187.21
+hostname: chen.com
 
 https:
   # https port for harbor, default is 443
   port: 443
   # The path of cert and key files for nginx
-  certificate: /data/harbor/cert/172.28.187.21.crt
-  private_key: /data/harbor/cert/172.28.187.21.key
+  certificate: /data/harbor/cert/chen.com.crt
+  private_key: /data/harbor/cert/chen.com.key
 
 harbor_admin_password: Harbor12345
 ```
@@ -43,18 +43,20 @@ __运行 harbor__
 ```
 docker-compose ps
 ```
+* 在本地将 chen.com 添加入 host 后，浏览器访问 https://chen.com 即可进入Harbor
 
-__浏览器访问 https://172.28.187.21__
-
-* 创建一个 test 项目
-* 创建 chen 用户
-* 登陆用户后
+__Docker 机器的操作__
+* 将服务器私钥 chen.com.crt 放入 docker 的特定路径下
 ```
     mkdir /etc/docker/certs.d/172.28.187.21 -p
 ```
-
-__登陆成功后__
+* 在 /etc/hosts 中加入 chen.com
+* 使用 Docker 进行登陆
 ```
-    docker tag tomcat:v1 reg.aliangedu.com/test/tomcat:v1
-    docker push reg.aliangedu.com/test/tomcat:v1
+docker login chen.com
+```
+* 进行推送操作
+```
+    docker tag tomcat:v1 chen.com/test/tomcat:v1
+    docker push chen.com/test/tomcat:v1
 ```
