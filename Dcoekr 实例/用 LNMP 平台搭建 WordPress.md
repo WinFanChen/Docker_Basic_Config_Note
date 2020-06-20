@@ -5,18 +5,17 @@ PHP网页要挂载到一个目录
 
 拉取mysql的镜像（默认8.0） docker pull mysql
 
-注意：要先创建lnmp的网络 [详见Dockerfile内容](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/Docker%20用法/Dockerfile的领域.md)
+注意：要先创建lnmp的网络
 ```
 docker network create lnmp 
 ```
 创建启动容器
 ```
-docker run -itd \
+docker run -d \
 --name lnmp_mysql \
---net lnmp -p 3306:3306 \
+--net lnmp \
 --mount src=mysql-vol,dst=/var/lib/mysql \
--e MYSQL_ROOT_PASSWORD=123456 \
-mysql --character-set-server=utf8
+-e MYSQL_ROOT_PASSWORD=123456 mysql --character-set-server=utf8
 ```
 
 在 /var/lib/docker/volumes/mysql-vol/_data/ 下是初始化的数据库
