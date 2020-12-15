@@ -1,32 +1,23 @@
-#引用镜像
-FROM centos
+FROM centos:7
+LABEL zhao chen
+RUN yum install -y gcc gcc-c++ make \
+    openssl-devel pcre-devel gd-devel \
+    iproute net-tools telnet wget curl && \
+    yum clean all && \
+    rm -rf /var/cache/yum/*
 
-#说明信息
-LABEL maintainer="wfc@outlook.com"
+ADD nginx-1.15.5.tar.gz /
+RUN cd nginx-1.15.5 && \
+    ./configure --prefix=/usr/local/nginx \
+    --with-http_ssl_module \
+    --with-http_stub_status_module && \
+    make -j 4 && make install && \
+    mkdir /usr/local/nginx/conf/vhost && \
+    cd / && rm -rf nginx* && \
+    ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-#安装依赖包
-RUN yum install -y gcc gcc-c++ make openssl-devel pcre-devel
-
-#将nginx-1.12.1.tar.gz放入/tmp
-ADD nginx-1.16.0.tar.gz /tmp
-
-#进行编译安装操作
-RUN cd /tmp/nginx-1.16.0 && \
-    ./configure --prefix=/usr/local/nginx && \
-    make -j 2 && \
-    make install
-
-#清理工作
-RUN rm -rf /tmp/nginx-1.16.0* && yum clean all
-
-#将配置文件拷贝到此路径下
-COPY nginx.conf /usr/lcoal/nginx/conf
-
-#指定工作目录
+ENV PATH $PATH:/usr/local/nginx/sbin
+COPY nginx.conf /usr/local/nginx/conf/nginx.conf
 WORKDIR /usr/local/nginx
-
-#声明端口
 EXPOSE 80
-
-#将容器放入后台操作
-CMD ["./sbin/nginx","-g","daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]
