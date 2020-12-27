@@ -1,7 +1,7 @@
-## Dockerfile指令
+## Dockerfile 指令
 docker image build 命令通过 dockerfile 文件来构建镜像
 
-__dockerfile文件示例__
+__dockerfile 文件示例__
 ```
 from centos:7                           //表示从什么地方继承镜像内容
 maintainer zhao chen                    //填写维护信息
@@ -18,9 +18,9 @@ healthcheck                             //健康检查
 cmd ["./sbin/php-ftp","-c",...]         //运行镜像时运行shell命令 用数组实现 一般用来启脚本什么的
 ```
 
-### __用build构建nginx镜像__
+### __用 build 构建 nginx 镜像__
 * 所需文件：
-    * [dockerfile](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/Docker%20用法/Dockerfile)(构建镜像)
+    * [dockerfile](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E6%96%87%E4%BB%B6/Dockerfile)(构建镜像)
     * [nginx-1.12.1.tar.gz](http://nginx.org/download/nginx-1.15.5.tar.gz)(nginx的源码包)
     * nginx.conf(nginx的配置文件)
    
@@ -36,7 +36,8 @@ cmd ["./sbin/php-ftp","-c",...]         //运行镜像时运行shell命令 用�
     docker run -d --name nginx01 -p 88:80 nginx:v1
     ```
     
-__创建docker网络__
+__创建 docker 网络__
 
-* 构建完镜像的部署工作后要创建自定义网络  docker network create lnmp(通过容器名进行通讯)<br>
+* 构建完镜像的部署工作后要创建自定义网络  docker network create lnmp(通过容器名进行通讯)
+
 * 容器通过dns解析来解析容器名进行通讯 在nginx容器下ping lnmp_php会去解析php的容器
