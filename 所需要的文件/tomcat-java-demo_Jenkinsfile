@@ -1,0 +1,50 @@
+#!/usr/bin/env groovy
+
+def registry = "192.168.1.12"
+def image_name = "${registry}/library/tomcat-java-demo:${Branch}"
+def git_address = "git@192.168.1.12:/home/git/tomcat-java-demo.git"
+def git_auth = "44de19fe-200b-4101-9783-56147639460a"
+
+pipeline {
+    agent any
+    stages {
+        stage('拉取代码'){
+            steps {
+              checkout([$class: 'GitSCM', branches: [[name: '${Branch}']], userRemoteConfigs: [[credentialsId: "${git_auth}", url: "${git_address}"]]])
+            }
+        }
+
+        stage('代码编译'){
+           steps {
+             sh """
+                mvn clean package -Dmaven.test.skip=true
+                """ 
+           }
+        }
+
+        stage('构建镜像'){
+          steps {
+                sh """
+                  echo '
+                    FROM ${registry}/library/tomcat:v1
+                    LABEL zhao chen
+                    RUN rm -rf /usr/local/tomcat/webapps/*
+                    ADD target/*.war /usr/local/tomcat/webapps/ROOT.war
+                  ' > Dockerfile
+                  docker build -t ${image_name} .
+                  docker login -u ${username} -p '${password}' ${registry}
+                  docker push ${image_name}
+                """
+           } 
+        }
+
+        stage('部署到Docker'){
+           steps {
+              sh """
+              docker rm -f tomcat-java-demo |true
+              docker container run -d --name tomcat-java-demo -p 88:8080 ${image_name}
+              """
+            }
+        }
+    }
+}

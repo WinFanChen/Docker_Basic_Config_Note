@@ -18,7 +18,7 @@ healthcheck                             //健康检查
 cmd ["./sbin/php-ftp","-c",...]         //运行镜像时运行shell命令 用数组实现 一般用来启脚本什么的
 ```
 
-__用build构建nginx镜像__
+### __用build构建nginx镜像__
 * 所需文件：
     * [dockerfile](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/Docker%20用法/Dockerfile)(构建镜像)
     * [nginx-1.12.1.tar.gz](http://nginx.org/download/nginx-1.15.5.tar.gz)(nginx的源码包)
