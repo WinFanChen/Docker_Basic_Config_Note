@@ -1,9 +1,9 @@
 - 目标：将 git 仓库的代码拉到本地使用maven进行编译，打包成 docker 镜像推送到 Harbor ，从 Harbor 拉取镜像并运行
-- 准备工作：首先 Node1 和 Node2 都必须[安装 docker](docker_install_secipt.sh) 和 git ，且防火墙都已关闭
+- 准备工作：首先 Node1 和 Node2 都必须[安装 docker](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E6%96%87%E4%BB%B6/docker_install_secipt.sh) 和 git ，且防火墙都已关闭
 - 部署工作：
     - ### Node2 部署 docker-compose：
         - 部署 docker-compose 的目的是为了安装 Harbor
-        - 将 [docker-compose 文件](docker-compose-Linux-x86_64)赋予执行权限，放入 /usr/bin/ 路径下
+        - 将 [docker-compose 文件](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E6%96%87%E4%BB%B6/docker-compose-Linux-x86_64)赋予执行权限，放入 /usr/bin/ 路径下
             ```
             chmod +x docker-compose-Linux-x86_64
             mv docker-compose-Linux-x86_64 /usr/bin/docker-compose
@@ -107,7 +107,7 @@
             > 安装 openjdk 才能给 jenkins 安装插件
 
     - ### Node1 部署 Maven:
-        - 解压 [maven 离线安装包](apache-maven-3.5.0-bin.tar.gz)并放入指定目录
+        - 解压 [maven 离线安装包](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E6%96%87%E4%BB%B6/apache-maven-3.5.0-bin.tar.gz)并放入指定目录
             ```
             mv apache-maven-3.5.0/ /usr/local/maven/
             ```
@@ -120,7 +120,7 @@
             > maven 用来编译项目
 
     - ### Node1 部署 Tomcat:
-        - 解压 [Tomact 离线安装包](apache-tomcat-8.5.43.tar.gz)并放入指定目录
+        - 解压 [Tomact 离线安装包](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E6%96%87%E4%BB%B6/apache-tomcat-8.5.43.tar.gz)并放入指定目录
             ```
             mv apache-tomcat-8.5.43/ /usr/local/jenkins_tomcat/
             ```
@@ -155,6 +155,6 @@
             - 将 Node1 的 .ssh/id_rsa 私钥内容上传到 Private Key
             - 获得 id
         - 新建流水线作业
-        - 填入[脚本内容](tomcat-java-demo_Jenkinsfile)
+        - 填入[脚本内容](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E6%96%87%E4%BB%B6/tomcat-java-demo_Jenkinsfile)
             - 脚本依赖三个个需要手动填入的 String Parameter 变量，分别Branch,username,password
             - 脚本内容的 git_auth 要改成 ssh 私钥在 Jenkins 生成的 id
