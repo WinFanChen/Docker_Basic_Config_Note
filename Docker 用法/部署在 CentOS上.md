@@ -2,7 +2,7 @@
 
 只要完全按着说明部署就可以完成
 
-[docker 安装脚本](docker_install_secipt.sh)
+docker 安装步骤
 ```
 yum install -y yum-utils \
   device-mapper-persistent-data \
@@ -18,6 +18,7 @@ systemctl start docker
 
 systemctl enable docker
 ```
+[脚本链接](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E6%96%87%E4%BB%B6/docker_install_secipt.sh)
 
 首先保证本地时间与docker服务器的时间保持一致！不然镜像都拉不下来
 

@@ -1,5 +1,5 @@
 - 目标：将 git 仓库的代码拉到本地使用maven进行编译，打包成 docker 镜像推送到 Harbor ，从 Harbor 拉取镜像并运行
-- 准备工作：首先 Node1 和 Node2 都必须[安装 docker](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E6%96%87%E4%BB%B6/docker_install_secipt.sh) 和 git ，且防火墙都已关闭
+- 准备工作：首先 Node1 和 Node2 都必须[安装 docker](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/Docker%20%E7%94%A8%E6%B3%95/%E9%83%A8%E7%BD%B2%E5%9C%A8%20CentOS%E4%B8%8A.md) 和 git ，且防火墙都已关闭
 - 部署工作：
     - ### Node2 部署 docker-compose：
         - 部署 docker-compose 的目的是为了安装 Harbor
