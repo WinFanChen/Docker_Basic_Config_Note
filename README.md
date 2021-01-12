@@ -1,7 +1,7 @@
 # Docker 基础配置备忘录
 
 ## 用法
-- [部署在 CentOS](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/Docker%20%E7%94%A8%E6%B3%95/%E9%83%A8%E7%BD%B2%E5%9C%A8%20CentOS%E4%B8%8A.md)
+- [部署在 CentOS 上](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/Docker%20%E7%94%A8%E6%B3%95/%E9%83%A8%E7%BD%B2%E5%9C%A8%20CentOS%20%E4%B8%8A.md)
 - [管理镜像](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/Docker%20%E7%94%A8%E6%B3%95/%E6%80%8E%E4%B9%88%E7%AE%A1%E7%90%86%E9%95%9C%E5%83%8F.md)
 - [管理容器](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/Docker%20%E7%94%A8%E6%B3%95/%E6%80%8E%E4%B9%88%E7%AE%A1%E7%90%86%E5%AE%B9%E5%99%A8.md)
 - [管理应用程序数据](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/Docker%20%E7%94%A8%E6%B3%95/%E7%AE%A1%E7%90%86%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%95%B0%E6%8D%AE.md)

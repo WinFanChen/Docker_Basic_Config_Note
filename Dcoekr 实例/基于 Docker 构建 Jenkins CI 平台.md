@@ -105,7 +105,7 @@ __部署工作__
         - Jenkins 在安装的时候如果 jdk 是由 java 离线安装包提供的就惨了，所以要使用 yum 安装 openjdk
         - 安装 openjdk 才能给 jenkins 安装插件
 - Node1 部署 Maven
-    - 解压 [maven 离线安装包](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E6%96%87%E4%BB%B6/apache-maven-3.5.0-bin.tar.gz)并放入指定目录
+    - 解压 [maven 离线安装包](http://archive.apache.org/dist/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz)并放入指定目录
         ```
         mv apache-maven-3.5.0/ /usr/local/maven/
         ```
@@ -118,7 +118,7 @@ __部署工作__
         > maven 用来编译项目
 
 - Node1 部署 Tomcat
-    - 解压 [Tomact 离线安装包](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E6%96%87%E4%BB%B6/apache-tomcat-8.5.43.tar.gz)并放入指定目录
+    - 解压 [Tomact 离线安装包](http://mirror.bit.edu.cn/apache/tomcat/tomcat-8/v8.5.43/bin/apache-tomcat-8.5.43.tar.gz)并放入指定目录
         ```
         mv apache-tomcat-8.5.43/ /usr/local/jenkins_tomcat/
         ```
