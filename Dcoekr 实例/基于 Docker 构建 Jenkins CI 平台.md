@@ -74,7 +74,7 @@ __部署工作__
         git commit -m 'all'
         git push origin master
         ```
-        > 在这一步是需要输入 git 用户的密码
+        - 在这一步是需要输入 git 用户的密码
     - 在 Node1 上创建密钥对以实现免密登录 Node2 的 git 用户
         ```
         ssh-keygen
@@ -85,15 +85,15 @@ __部署工作__
             ssh git@192.168.1.12
             ```
 - Node1 部署 jdk
-    - 查看CentOS自带JDK是否已安装
+    - 查看 CentOS 自带 JDK 是否已安装
         ```
         yum list installed |grep java
         ```
-    - 查看yum库中的Java安装包
+    - 查看 yum 库中的 Java 安装包
         ```
         yum -y list java*
         ```
-    - 以 yum 库中 java-1.8.0 为例, "*"表示将 java-1.8.0 的所有相关 Java 程序都安装上
+    - 以 yum 库中 java-1.8.0 为例， "*" 表示将 java-1.8.0 的所有相关 Java 程序都安装上
         ```
         yum -y install java-1.8.0-openjdk*
         ```
@@ -105,7 +105,7 @@ __部署工作__
         - Jenkins 在安装的时候如果 jdk 是由 java 离线安装包提供的就惨了，所以要使用 yum 安装 openjdk
         - 安装 openjdk 才能给 jenkins 安装插件
 - Node1 部署 Maven
-    - 解压 [maven 离线安装包](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E6%96%87%E4%BB%B6/apache-maven-3.5.0-bin.tar.gz)并放入指定目录
+    - 解压 [maven 离线安装包](http://archive.apache.org/dist/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz)并放入指定目录
         ```
         mv apache-maven-3.5.0/ /usr/local/maven/
         ```
@@ -115,14 +115,14 @@ __部署工作__
         PATH=$PATH:$MAVEN_HOME/bin
         ```
     - 尝试执行 `mvn --version` 看看能不能获取到 mvn 的版本和 jdk 的位置
-        > maven 用来编译项目
+        - maven 用来编译项目
 
 - Node1 部署 Tomcat
-    - 解压 [Tomact 离线安装包](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E6%96%87%E4%BB%B6/apache-tomcat-8.5.43.tar.gz)并放入指定目录
+    - 解压 [Tomact 离线安装包](http://mirror.bit.edu.cn/apache/tomcat/tomcat-8/v8.5.43/bin/apache-tomcat-8.5.43.tar.gz)并放入指定目录
         ```
         mv apache-tomcat-8.5.43/ /usr/local/jenkins_tomcat/
         ```
-        > Tomcat 用来发布 Jenkins 网页
+        - Tomcat 用来发布 Jenkins 网页
 - Node1 发布 Jenkins 网页
     - 将[离线安装包 jenkins.war](http://mirrors.jenkins.io/war-stable/2.263.1/jenkins.war) 放入 Tomcat 工作目录并重命名为 ROOT.war
         ```
