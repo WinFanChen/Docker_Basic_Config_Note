@@ -12,5 +12,5 @@
 
 ## 实例
 - [搭建博客 WordPress](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/Dcoekr%20%E5%AE%9E%E4%BE%8B/%E7%94%A8%20LNMP%20%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA%20WordPress.md)
-- [搭建 Harbor](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/Dcoekr%20%E5%AE%9E%E4%BE%8B/Harbor%20%E6%90%AD%E5%BB%BA.md)
+- [搭建 Harbor 并以 https 的方式访问](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/Dcoekr%20%E5%AE%9E%E4%BE%8B/Harbor%20%E6%90%AD%E5%BB%BA.md)
 - [搭建 Jenkins 实现 pipeline 作业](https://github.com/lcePolarBear/Docker_Basic_Config_Note/blob/master/Dcoekr%20%E5%AE%9E%E4%BE%8B/%E5%9F%BA%E4%BA%8E%20Docker%20%E6%9E%84%E5%BB%BA%20Jenkins%20CI%20%E5%B9%B3%E5%8F%B0.md)
