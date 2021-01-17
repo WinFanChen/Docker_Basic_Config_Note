@@ -28,7 +28,7 @@ systemctl enable docker
 - 编辑路径：/etc/docker/daemon.json
     ```
     {
-        "registry-mirrors":["https://registry.docker-cn.com"]
+        "registry-mirrors":["https://registry.docker-cn.com","http://hub-mirror.c.163.com","https://docker.mirrors.ustc.edu.cn"]
     }
     ```
 
