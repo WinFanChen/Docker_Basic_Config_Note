@@ -26,6 +26,10 @@ __部署工作__
         - admin 用户的密码也可以找到： harbor_admin_password = Harbor12345
     - 执行 ./prepare 确认安装前的准备工作
     - 执行 ./install.sh 安装 Harbor
+    - Docker 端登陆 Harbor 需要先配置 daemon.json
+        ```
+        { "insecure-registries":["192.168.1.12"] }
+        ```
     - 测试：在 Node1 中拉下一个 tomcat 镜像提交给 Node2 的 harbor ( harbor 项目的镜像仓库会有推送命令的提示)
         ```
         docker pull tomcat:latest
