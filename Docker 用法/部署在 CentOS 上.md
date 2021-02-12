@@ -3,7 +3,7 @@
 只要完全按着说明部署就可以完成
 
 docker 安装步骤
-```
+```bash
 yum install -y yum-utils \
   device-mapper-persistent-data \
   lvm2
@@ -25,11 +25,12 @@ systemctl enable docker
 [docker国际镜像](https://hub.docker.com/search?&q=)中有大量常用镜像
 
 更新 Docker 使用国内的的镜像仓库
-- 编辑路径：/etc/docker/daemon.json
-    ```
-    {
-        "registry-mirrors":["https://registry.docker-cn.com","http://hub-mirror.c.163.com","https://docker.mirrors.ustc.edu.cn"]
-    }
-    ```
+```json
+# /etc/docker/daemon.json
+
+{
+    "registry-mirrors":["https://registry.docker-cn.com","http://hub-mirror.c.163.com","https://docker.mirrors.ustc.edu.cn"]
+}
+```
 
 [中国区加速拉取镜像](https://www.cnblogs.com/weifeng1463/p/7468391.html)
